@@ -1,3 +1,3 @@
-export getName() {
+export function getName() {
   return "Name";
 }
