@@ -1,0 +1,3 @@
+export getName() {
+  return "Name";
+}

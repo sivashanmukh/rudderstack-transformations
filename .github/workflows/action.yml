@@ -1,0 +1,20 @@
+name: Test
+
+on: [push, pull_request]
+
+jobs:
+  request:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.ref }}
+      - name: Rudder Transformer Test and Publish
+        uses: rudderlabs/rudder-transformation-action@0.0.1-beta.0
+        with:
+          metaPath: './meta.json'
+          email: 'siva.shanmukh@rudderstack.com'
+          accessKey: '1r46nxxn1jOLmQRWeTcXBLbmyJ6'
+          serverEndpoint: 'https://api.dev.rudderlabs.com'
+          uploadTestArtifact: true
+
