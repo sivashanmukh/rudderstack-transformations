@@ -10,7 +10,7 @@ jobs:
         with:
           ref: ${{ github.ref }}
       - name: Rudder Transformer Test and Publish
-        uses: rudderlabs/rudder-transformation-action@0.0.1-beta.0
+        uses: rudderlabs/rudder-transformation-action@0.0.1-beta.1
         with:
           metaPath: './meta.json'
           email: 'siva.shanmukh@rudderstack.com'
